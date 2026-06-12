@@ -18,7 +18,9 @@ RUN pip install --no-cache-dir --user -r requirements.txt
 FROM python:3.11-slim AS runtime
 
 # Non-root user
-RUN groupadd -r agent && useradd -r -g agent -d /app agent
+# NOTE: home must match where --user packages are copied (/home/agent/.local),
+# otherwise Python's user-site path won't find uvicorn/fastapi → crash loop.
+RUN groupadd -r agent && useradd -r -g agent -d /home/agent agent
 
 WORKDIR /app
 
