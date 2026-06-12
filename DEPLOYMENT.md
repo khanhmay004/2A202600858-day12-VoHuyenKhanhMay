@@ -26,8 +26,8 @@
 | Key | Value |
 |---|---|
 | `ENVIRONMENT` | `production` |
-| `AGENT_API_KEY` | *secret — set trên Render dashboard; gửi riêng cho giảng viên khi cần test* |
-| `JWT_SECRET` | *secret — set trên Render dashboard* |
+| `AGENT_API_KEY` | *secret* |
+| `JWT_SECRET` | *secret* |
 | `DAILY_BUDGET_USD` | `5.0` |
 | `RATE_LIMIT_PER_MINUTE` | `20` |
 | `OPENAI_API_KEY` | *(để trống → dùng mock LLM, không tốn tiền)* |
